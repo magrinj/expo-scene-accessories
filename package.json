@@ -1,0 +1,98 @@
+{
+  "name": "expo-scene-accessories",
+  "version": "0.0.0",
+  "description": "Scene Accessories for React Native and Expo. Render React Native UI on iPhone Duo's outer display and external displays.",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "files": [
+    "build",
+    "ios",
+    "src",
+    "!src/__tests__",
+    "expo-module.config.json",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "node internal/module_scripts/build.js",
+    "clean": "node internal/module_scripts/clean.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p example",
+    "test": "node internal/module_scripts/test.js",
+    "prepare": "node internal/module_scripts/prepare.js",
+    "open:ios": "node internal/module_scripts/open-ios.js",
+    "release": "release-it"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release v${version}",
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "publish": true,
+      "skipChecks": true
+    },
+    "hooks": {
+      "after:bump": "cd scoped && npm pkg set version=${version} dependencies.expo-scene-accessories=${version}",
+      "after:release": "cd scoped && npm publish --access public --tag $(node -p \"'${version}'.split('-')[1]?.split('.')[0] ?? 'latest'\")"
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular",
+        "infile": "CHANGELOG.md"
+      }
+    }
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "expo-scene-accessories",
+    "scene-accessories",
+    "UISceneAccessory",
+    "iphone-duo",
+    "camera-capture-accessory",
+    "external-display",
+    "airplay",
+    "multi-display"
+  ],
+  "repository": "https://github.com/magrinj/expo-scene-accessories.git",
+  "bugs": {
+    "url": "https://github.com/magrinj/expo-scene-accessories/issues"
+  },
+  "author": "Jérémy Magrin <contact@magrin.fr> (https://github.com/magrinj)",
+  "license": "MIT",
+  "homepage": "https://github.com/magrinj/expo-scene-accessories#readme",
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@release-it/conventional-changelog": "^10.0.6",
+    "@testing-library/react-native": "^13.3.0",
+    "@types/jest": "^29.2.1",
+    "@types/react": "~19.3.0",
+    "babel-preset-expo": "~58.0.4",
+    "eslint": "~9.39.4",
+    "eslint-config-universe": "^15.0.3",
+    "expo": "~58.0.0-preview.5",
+    "jest": "^29.7.0",
+    "jest-expo": "~58.0.3",
+    "prettier": "^3.0.0",
+    "react": "19.3.0",
+    "react-native": "0.88.0-rc.1",
+    "react-test-renderer": "19.3.0",
+    "release-it": "^19.2.4",
+    "typescript": "^5.9.2"
+  },
+  "jest": {
+    "preset": "jest-expo/ios",
+    "roots": [
+      "<rootDir>/src"
+    ]
+  },
+  "peerDependencies": {
+    "expo": ">=58.0.0-0",
+    "react": "*",
+    "react-native": "*"
+  }
+}

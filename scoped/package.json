@@ -1,0 +1,25 @@
+{
+  "name": "@magrinj/expo-scene-accessories",
+  "version": "0.0.0",
+  "description": "Alias of expo-scene-accessories: Scene Accessories for React Native and Expo. Install only one of the two names.",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "keywords": [
+    "react-native",
+    "expo",
+    "expo-scene-accessories",
+    "scene-accessories",
+    "iphone-duo"
+  ],
+  "repository": "https://github.com/magrinj/expo-scene-accessories.git",
+  "author": "Jérémy Magrin <contact@magrin.fr> (https://github.com/magrinj)",
+  "license": "MIT",
+  "homepage": "https://github.com/magrinj/expo-scene-accessories#readme",
+  "dependencies": {
+    "expo-scene-accessories": "0.0.0"
+  }
+}

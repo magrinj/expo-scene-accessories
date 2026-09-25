@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "Scene Accessories",
+    "slug": "expo-scene-accessories-example",
+    "scheme": "sceneaccessories",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "expo.modules.sceneaccessories.example"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "The camera powers the Camera Capture Accessory demo.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false
+        }
+      ]
+    ]
+  }
+}
