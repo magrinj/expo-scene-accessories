@@ -1,6 +1,6 @@
 {
   "name": "@magrinj/expo-scene-accessories",
-  "version": "0.0.0",
+  "version": "0.1.0-alpha.0",
   "description": "Alias of expo-scene-accessories: Scene Accessories for React Native and Expo. Install only one of the two names.",
   "main": "index.js",
   "types": "index.d.ts",
@@ -20,6 +20,6 @@
   "license": "MIT",
   "homepage": "https://github.com/magrinj/expo-scene-accessories#readme",
   "dependencies": {
-    "expo-scene-accessories": "0.0.0"
+    "expo-scene-accessories": "0.1.0-alpha.0"
   }
 }

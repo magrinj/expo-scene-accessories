@@ -1,6 +1,6 @@
 {
   "name": "expo-scene-accessories",
-  "version": "0.0.0",
+  "version": "0.1.0-alpha.0",
   "description": "Scene Accessories for React Native and Expo. Render React Native UI on iPhone Duo's outer display and external displays.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
